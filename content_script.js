@@ -1,9 +1,12 @@
 function refresh() {
-	document.getElementById("addbtn").click();
+	document.getElementById("_REFRESH_").click();
 }
 
 // tracker to see if user disables refreshing
 qfreshEnabled = true;
+
+var wait = 0;
+while (wait === 0){};
 
 var intervalId = setInterval(function(){
 	if(!qfreshEnabled){
@@ -12,7 +15,4 @@ var intervalId = setInterval(function(){
 
 	refresh();
 
- }, 60000);
-
-// start our refresh
-intervalId();
+ }, 2000);
